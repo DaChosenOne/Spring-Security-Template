@@ -58,6 +58,7 @@ public class SetupDataApp implements ApplicationListener<ContextRefreshedEvent> 
         userEntity.setIsActive(true);
         userEntity.setIsNotLocked(false);
         userEntity.setJoinDate(new Date());
+        userEntity.setLastLoginDate(new Date());
         userEntity.setRoles(Collections.singletonList(roleAdmin));
         createUserIfNotFound(userEntity);
     }

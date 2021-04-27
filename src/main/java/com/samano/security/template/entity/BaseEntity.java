@@ -17,8 +17,7 @@ public class BaseEntity implements Serializable {
     private Long id;
 
     @Version
-    @Getter(value = AccessLevel.NONE)
-    @Setter(value = AccessLevel.NONE)
+    @Transient
     private Integer version;
 
 }
