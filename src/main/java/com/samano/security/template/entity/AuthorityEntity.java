@@ -18,4 +18,8 @@ public class AuthorityEntity extends BaseEntity{
 
     @ManyToMany(mappedBy = "authorities")
     private List<RoleEntity> roles;
+
+    public AuthorityEntity(String name){
+        this.name = name;
+    }
 }
