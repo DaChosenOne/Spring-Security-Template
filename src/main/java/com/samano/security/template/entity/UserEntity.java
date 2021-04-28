@@ -41,7 +41,7 @@ public class UserEntity  extends BaseEntity{
     @Column(name = "is_not_locked")
     private Boolean isNotLocked;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_roles",
             joinColumns = @JoinColumn(

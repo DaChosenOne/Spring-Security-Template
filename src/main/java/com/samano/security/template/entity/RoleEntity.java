@@ -21,7 +21,7 @@ public class RoleEntity extends BaseEntity {
     private List<UserEntity> users;
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "roles_authorities",
             joinColumns = @JoinColumn(
